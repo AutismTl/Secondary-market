@@ -13,7 +13,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -23,4 +23,9 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'//图片圆形化
+    compile 'com.jude:rollviewpager:1.4.6'//图片轮播
+    compile 'com.bm.photoview:library:1.4.1'//图片放大旋转
+    compile 'com.zzti.fengyongge:imagepicker:1.0'//图片选择器
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+      <group android:checkableBehavior="single">
+          <item
+              android:id="@+id/nav_shezhi"
+              android:icon="@mipmap/shezhi"
+              android:title="修改设置"/>
+          <item
+              android:id="@+id/nav_update"
+              android:icon="@mipmap/update"
+              android:title="版本更新"/>
+          <item
+              android:id="@+id/nav_change"
+              android:icon="@mipmap/change"
+              android:title="切换用户"/>
+          <item
+              android:id="@+id/nav_feedback"
+              android:icon="@mipmap/feedback"
+              android:title="用户反馈"/>
+
+      </group>
+</menu>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#4169E1">
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/delete"
+            android:layout_marginLeft="4dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/bg_black"
+            android:textSize="20sp"
+            android:text="发布"/>
+
+        <Button
+            android:id="@+id/publish_help"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/bg_black"
+            android:textSize="18sp"
+            android:background="#00000000"
+            android:text="帮助"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/div_white" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableRight="@mipmap/camera"
+        android:drawablePadding="5dp"
+        android:hint="标题 品类品牌型号等"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="描述下你的闲置物品"/>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="5dp"
+        android:columnWidth="100dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"  >
+    </GridView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/publish_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="图片"
+            android:textSize="30sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/publish_sure"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="发布"
+            android:textSize="30sp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

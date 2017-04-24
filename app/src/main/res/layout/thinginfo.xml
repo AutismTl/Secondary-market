@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ScrollView
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.jude.rollviewpager.RollPagerView
+                    android:id="@+id/rollpagerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    app:rollviewpager_play_delay="3000" />
+                <TextView
+                    android:id="@+id/info_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="6dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_black" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/info_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:textSize="22dp"
+                        android:textColor="#FF4500"/>
+                    <TextView
+                        android:id="@+id/z"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ll"
+                        android:layout_alignBottom="@+id/info_value"
+                        android:layout_marginRight="8dp"
+                        android:text="点赞 12"
+                        android:textColor="@color/colorPrimary"/>
+                    <TextView
+                        android:id="@+id/ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/info_value"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:text="浏览 432"
+                        android:textColor="#bdbdbd" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/div_white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@mipmap/head"/>
+                    <TextView
+                        android:id="@+id/info_user_name"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/bg_black"
+                        android:textSize="20sp"
+                        android:text="zhishijdangd489"/>
+                    <TextView
+                        android:id="@+id/info_user_info"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/info_user_name"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/bg_black"
+                        android:text="注册231天了，卖出过65件宝贝，90后天秤座女生,喜欢美食，电影"/>
+                    <TextView
+                        android:id="@+id/info_user_sm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/feedback"
+                        android:layout_below="@id/info_user_info"
+                        android:layout_marginLeft="8dp"
+
+                        android:text=" 实人认证已通过"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/update"
+                        android:layout_below="@id/info_user_info"
+                        android:layout_toRightOf="@id/info_user_sm"
+                        android:layout_marginLeft="14dp"
+                        android:text=" 支付信用已授权"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@color/div_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/bg_black"
+                    android:textSize="20sp"
+                    android:text=" 留言 · 28"
+                    android:drawableLeft="@mipmap/line"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/div_white" />
+                <ListView
+                    android:id="@+id/info_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </ListView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_black"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_above="@id/bottom"
+            android:background="@color/div_white" />
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#fcfafa">
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:drawableTop="@mipmap/comment"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="留言"
+                android:textSize="12sp"/>
+            <TextView
+                android:id="@+id/agree"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/comment"
+                android:drawableTop="@mipmap/agree"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="点赞"
+                android:textSize="12sp"/>
+            <TextView
+                android:id="@+id/buy"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:background="#f74e4e"
+                android:text="我想要"
+                android:textColor="#fcfbfb"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

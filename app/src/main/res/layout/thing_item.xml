@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/thing_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/thing_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:textColor="@color/bg_black"
+            android:textSize="18dp"
+            android:text="防身刀剑 刀 刀剑"
+            />
+        <TextView
+            android:id="@+id/thing_time"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="#B0C4DE"
+            android:text="2017-3-12 08:48:41"/>
+        <TextView
+            android:id="@+id/thing_value"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="#FF4500"
+            android:textSize="20dp"
+            android:text="￥74.5"/>
+    </LinearLayout>
+</LinearLayout>
